@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    tools:context=".RunActivity" >
+          
+  	<TableRow
+  	    android:layout_width="fill_parent"
+  	    android:layout_height="wrap_content" >
+
+  	    <Button
+  	        android:id="@+id/usbconnectBtn"
+  	        android:layout_width="0dp"
+  	        android:layout_height="wrap_content"
+  	        android:layout_weight="1"
+  	        android:enabled="true"
+  	        android:focusableInTouchMode="true"
+  	        android:text="@+string/usbconnectbtntxt" />
+
+  	    <EditText
+  	        android:id="@+id/sendcmdtxt"
+  	        android:layout_width="fill_parent"
+  	        android:layout_height="wrap_content"
+  	        android:focusable="true"
+  	        android:focusableInTouchMode="true"
+  	        android:hint="Enter Controller Commands Here..."
+  	        android:imeOptions="actionSend"
+  	        android:inputType="text" >
+
+  	    </EditText>
+
+  	    <Button
+  	        android:id="@+id/sendcmdbtn"
+  	        android:layout_width="fill_parent"
+  	        android:layout_height="wrap_content"
+  	        android:enabled="false"
+  	        android:text="Send" />
+  	</TableRow>
+
+   <TableRow 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"         
+       >
+       <CheckBox
+ 	    android:id="@+id/joinCheckBox"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content" 	
+ 	    android:text="@+string/joinCheckBoxtxt" />
+   </TableRow>    
+   <TableRow 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"         
+       >
+       
+     <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       <TableRow 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+       >
+   		 <Button
+        android:id="@+id/decXM1Btn"
+        android:layout_width="wrap_content"        
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:onClick="connectBtnOnclick"
+        android:text="@+string/decXM1Btntxt" />           
+      
+    	<Button
+        android:id="@+id/decM1Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:onClick="connectBtnOnclick"
+        android:text="@+string/decM1Btntxt" /> 
+      </TableRow> 
+      
+      <TableRow 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"                 
+       >
+      	<TextView
+        android:id="@+id/cmdM1"         
+        android:text="@+string/cmdM1txt" 
+        android:padding="5dp"
+        android:gravity="center"
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_span="2"               
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+      </TableRow>
+
+     </TableLayout>
+
+     <SeekBar
+         android:id="@+id/seekBarM1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="4"
+         android:enabled="false"
+         android:max="2000"
+         android:progress="1000" />
+
+     <TableLayout>
+       <TableRow 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+       >
+   		<Button
+        android:id="@+id/incXM1Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:onClick="connectBtnOnclick"
+        android:text="@+string/incXM1Btntxt" />           
+      
+    	<Button
+        android:id="@+id/incM1Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:onClick="connectBtnOnclick"
+        android:text="@+string/incM1Btntxt" /> 
+      </TableRow> 
+      
+      <TableRow 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"              
+       >
+    	<Button
+        android:id="@+id/m1StopBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_span="2"
+        android:enabled="false"        
+        android:text="@+string/m1StopBtntxt" /> 
+      </TableRow>
+
+     </TableLayout>          
+    </TableRow>
+
+ 	<TableRow 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"         
+       >
+       
+     <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+       <TableRow 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+       >
+   		 <Button
+        android:id="@+id/decXM2Btn"
+        android:layout_width="wrap_content"        
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:onClick="connectBtnOnclick"
+        android:text="@+string/decXM2Btntxt" />           
+      
+    	<Button
+        android:id="@+id/decM2Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:onClick="connectBtnOnclick"
+        android:text="@+string/decM2Btntxt" /> 
+      </TableRow> 
+      
+      <TableRow 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"                 
+       >
+      	<TextView
+        android:id="@+id/cmdM2"         
+        android:text="@+string/cmdM2txt" 
+        android:padding="5dp"
+        android:gravity="center"
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_span="2"               
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+      </TableRow>
+
+     </TableLayout>
+
+     <SeekBar
+         android:id="@+id/seekBarM2"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:enabled="false"
+         android:layout_weight="4"
+         android:max="2000"      
+         android:progress="1000" />
+
+     <TableLayout>
+       <TableRow 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"         
+       >
+   		 <Button
+        android:id="@+id/incXM2Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:onClick="connectBtnOnclick"
+        android:text="@+string/incXM2Btntxt" />           
+      
+    	<Button
+        android:id="@+id/incM2Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:onClick="connectBtnOnclick"
+        android:text="@+string/incM2Btntxt" /> 
+      </TableRow> 
+      
+      <TableRow 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"              
+       >
+    	<Button
+        android:id="@+id/m2StopBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_span="2"
+        android:enabled="false"        
+        android:text="@+string/m2StopBtntxt" /> 
+      </TableRow>
+
+     </TableLayout>          
+    </TableRow>
+
+ 	<TableRow
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:gravity="center_horizontal|left" >
+
+ 		<TextView
+ 		    android:id="@+id/consoletxttitle"
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:text="USB Input Console"
+ 		    android:textAppearance="?android:attr/textAppearanceMedium" />
+ 		 	    
+ 		<TextView
+ 		    android:id="@+id/statustxttitle"
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:text="Status Console"
+ 		    android:textAppearance="?android:attr/textAppearanceMedium" />
+	      
+	</TableRow>
+	  
+	<TableRow
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+
+	    <GridView
+	        android:id="@+id/consoletxt"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_span="1"
+	        android:layout_weight="1"	        
+	        android:numColumns="auto_fit"
+	        android:scrollbarAlwaysDrawVerticalTrack="true" />
+
+	    <TextView
+	        android:id="@+id/statustxt"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_span="2"
+	        android:layout_weight="1"
+	        android:background="#000000"
+	        android:lines="6"
+	        android:maxLines="6"
+	        android:scrollbarAlwaysDrawVerticalTrack="true"
+	        android:scrollbarStyle="outsideInset"
+	        android:scrollbars="vertical"
+	        android:textColor="#02FA0B" />
+	</TableRow>
+
+</TableLayout>
